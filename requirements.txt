@@ -22,6 +22,7 @@ aioaria2
 aioqbt
 aient
 beautifulsoup4
+cachetools
 cloudscraper
 cryptography>=41.0.0
 codext>=1.15.6
