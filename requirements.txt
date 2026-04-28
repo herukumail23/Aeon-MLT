@@ -14,7 +14,7 @@ tgcrypto
 #ElectroCrypto # Optional for elctrogram. Comment out other tgcrypto if using this
 
 asyncio
-aiofiles>=23.1.0
+aiofiles==0.7.0
 aioshutil
 anytree
 apscheduler
