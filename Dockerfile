@@ -1,11 +1,15 @@
 FROM shabbirmahmud/aimmlbot:latest
 
 WORKDIR /usr/src/app
-RUN chmod 777 /usr/src/app
 
-RUN uv venv
 COPY requirements.txt .
-RUN uv pip install --no-cache-dir -r requirements.txt
+
+RUN python3 -m venv /venv
+ENV PATH="/venv/bin:$PATH"
+
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install -r requirements.txt
 
 COPY . .
+
 CMD ["bash", "start.sh"]
